@@ -1,0 +1,38 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblHobilerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Hobilerim Sayfası</h2>
+<br />
+<br />
+
+<div class="tab-pane" id="timeline">
+    <!-- The timeline -->
+    <div class="timeline timeline-inverse">
+        @foreach (var item in Model)
+        {
+            <div>
+                <i class="fas fa-comments bg-warning"></i>
+                <div class="timeline-item">
+
+                    <h3 class="timeline-header"><a href="#">@item.ID</a> @*@item.Konu*@</h3>
+
+                    <div class="timeline-body">
+                        @item.Aciklama1
+                    </div>
+                    <div class="timeline-body">
+                        @item.Aciklama2
+                    </div>
+                    <div class="timeline-footer">
+                        <a href="/Hobi/HobiGuncelleme/@item.ID" class="btn btn-warning btn-flat btn-sm"> Düzenle </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

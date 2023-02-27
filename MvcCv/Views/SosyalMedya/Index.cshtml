@@ -1,0 +1,42 @@
+﻿@using MvcCv.Models.Entity;
+@model List<TblSosyalMedya>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Sosyal Medya Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Id</td>
+        <td>Ad</td>
+        <td>Link</td>
+        <td>icon</td>
+        <td>Durum</td>
+        <td>Sil</td>
+        <td>Düzenle</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Ad</td>
+            <td>@item.Link</td>
+            <td>@item.icon</td>
+            <td>
+                @if (@item.Durum == true)
+                {
+                    { <p>Aktif</p>}
+                }
+                else {<p>Pasif</p>}
+            </td>
+            <td><a href="/SosyalMedya/SosyalSil/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/SosyalMedya/SosyalDuzenle/@item.ID" class="btn btn-warning">Düzenle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/SosyalMedya/YeniSosyal/" class="btn btn-primary">Yeni Sosyal Medya Ekle</a>
+

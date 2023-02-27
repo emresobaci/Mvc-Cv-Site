@@ -1,0 +1,42 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblSertifikalar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h2>Sertifikalarım</h2>
+<br />
+<div class="tab-pane" id="timeline">
+    <a href="/Sertifika/YeniSertifika" class="btn btn-info">Yeni Sertifika Girişi</a>
+    <br />
+    <br />
+    <!-- The timeline -->
+    <div class="timeline timeline-inverse">
+        @foreach (var item in Model)
+        {
+            <div class="time-label">
+                <span class="bg-success">
+                    @item.Tarih
+                </span>
+            </div>
+            <div>
+                <i class="fas fa-comment bg-primary"></i>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-body">
+                        @item.Aciklama &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        <a href="/Sertifika/SertifikaGetir/@item.ID" class="btn btn-primary btn-sm">Düzenle</a>
+                        <a href="/Sertifika/SertifikaSil/@item.ID" class="btn btn-danger btn-sm">Sil</a>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+

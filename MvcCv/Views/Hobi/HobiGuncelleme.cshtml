@@ -1,0 +1,18 @@
+﻿@model MvcCv.Models.Entity.TblHobilerim
+@{
+    ViewBag.Title = "HobiGuncelleme";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Hobi Güncelleme</h2>
+<br />
+<form method="post">
+    @Html.Label("Hobi Açıklaması 1")
+    @Html.TextAreaFor(x => x.Aciklama1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Hobi Açıklaması 2")
+    @Html.TextAreaFor(x => x.Aciklama2, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success"> Güncelle </button>
+</form>
