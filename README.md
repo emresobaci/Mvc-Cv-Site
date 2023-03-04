@@ -8,8 +8,6 @@ Kendinize ait CV sitesi teması ve admin paneli hazırlandı. Panelden sitede bu
 Controllers , Repositories ve Views klasörlerine göz atabilirler
 ## Ekran Görüntüleri
 
-![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/6q5txcy.png)
-![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/90gqdc9.png)
 ![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/pvtowx2.png)
 ![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/j0ywefm.png)
 ![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/bko89ho.png)
